@@ -103,3 +103,7 @@ Parse.Cloud.define('feedGalleryBookmark', GalleryBookmark.feed);
 Parse.Cloud.beforeSave('GalleryComment', GalleryComment.beforeSave);
 Parse.Cloud.afterSave('GalleryComment', GalleryComment.afterSave);
 Parse.Cloud.define('getComments', GalleryComment.getComments);
+
+Parse.Cloud.define('hello', function(req, res) {
+    res.success('Hi Ken');
+  });
