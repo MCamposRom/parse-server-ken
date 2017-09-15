@@ -1,8 +1,7 @@
-# parse-server-example
+# parse-server-ken
 
-Example project using the [parse-server](https://github.com/ParsePlatform/parse-server) module on Express.
+![photogram](https://user-images.githubusercontent.com/8027762/30503005-70eaf5d6-9a1d-11e7-8ff4-01bf616b1295.png)
 
-Read the full Parse Server guide here: https://github.com/ParsePlatform/parse-server/wiki/Parse-Server-Guide
 
 ### For Local Development
 
@@ -16,7 +15,6 @@ Read the full Parse Server guide here: https://github.com/ParsePlatform/parse-se
 * You now have a database named "dev" that contains your Parse data
 * Install ngrok and you can test with devices
 
-![photogram](https://user-images.githubusercontent.com/8027762/30503005-70eaf5d6-9a1d-11e7-8ff4-01bf616b1295.png)
 
 # Using it
 
