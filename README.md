@@ -12,4 +12,8 @@
 * Run the server with: `npm start`
 * To test go to:  localhost:1337/test (make sure everything checks out)
 ![test](https://user-images.githubusercontent.com/8027762/30503168-180c2fc4-9a1e-11e7-9224-dd40b9dfeb0c.png)
+* To see the parse-server go to: http://localhost:1337/parse-dashboard
+* To run the app, http://localhost:1337
+* Sign-up a user and then login
+* Note:  when you want to test with your device, make sure to change the IP value in index.js and www/build/main.js
 
