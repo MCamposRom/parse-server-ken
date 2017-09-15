@@ -11,6 +11,7 @@
 * Run `mongo` to connect to your database, just to make sure it's working. Once you see a mongo prompt, exit with Control-D
 * Run the server with: `npm start`
 * To test go to:  localhost:1337/test (make sure everything checks out)
+
 ![test](https://user-images.githubusercontent.com/8027762/30503168-180c2fc4-9a1e-11e7-9224-dd40b9dfeb0c.png)
 * To see the parse-server go to: http://localhost:1337/parse-dashboard
 * To run the app, http://localhost:1337
