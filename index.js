@@ -12,12 +12,14 @@ if (!databaseUri) {
   console.log('DATABASE_URI not specified, falling back to localhost.');
 }
 
+const IP = '10.0.0.8';
+
 var api = new ParseServer({
-  databaseURI: databaseUri || 'mongodb://10.0.0.8:27017/dev',
+  databaseURI: databaseUri || 'mongodb://'+ IP + ':27017/dev',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
   appId: process.env.APP_ID || 'myAppId',
   masterKey: process.env.MASTER_KEY || 'myMasterKey', //Add your master key here. Keep it secret!
-  serverURL: process.env.SERVER_URL || 'http://10.0.0.8:1337/parse',  // Don't forget to change to https if needed
+  serverURL: process.env.SERVER_URL || 'http://' + IP + ':1337/parse',  // Don't forget to change to https if needed
   liveQuery: {
     classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
   }
@@ -40,7 +42,7 @@ if (DASHBOARD_USER) {
         apps       : [
             {
                 appName  : 'Parse Server',
-                serverURL: 'http://10.0.0.8:1337/parse',
+                serverURL: 'http://' + IP + ':1337/parse',
                 appId    : 'myAppId',
                 masterKey: 'myMasterKey',
                 iconName : 'icon.png'
@@ -65,14 +67,7 @@ app.use(mountPath, api);
 
 app.use(express.static('www'));
 
-
-
 app.get('/', (req, res) => res.render('index'));
-
-// Parse Server plays nicely with the rest of your web routes
-//app.get('/', function(req, res) {
-//  res.status(200).send('I dream of being a website.  Please star the parse-server repo on GitHub!');
-//});
 
 // There will be a test page available on the /test path of your server url
 // Remove this before launching your app
